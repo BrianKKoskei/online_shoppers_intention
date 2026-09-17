@@ -1,23 +1,49 @@
-# Online Shopper Purchasing Intention Prediction
+<div align="center">
 
-A machine learning pipeline to predict real-time e-commerce transaction completions (`Revenue`) using session-level browsing behavior, engagement metrics, calendar attributes, and user demographics.
+# 🛒 Online Shopper Purchasing Intention Prediction
+
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+*An end-to-end machine learning pipeline predicting real-time e-commerce transaction completions (`Revenue`) based on session behavior, analytics, and temporal attributes.*
+
+</div>
+
+---
 
 ## 📌 Executive Summary
-* **Clean Dataset:** 12,205 unique sessions (10,312 non-converting / 1,893 converting) following duplicate removal.
-* **Class Imbalance:** Handled 15.47% positive class ratio using cost-sensitive class weighting (`class_weight='balanced'`) and SMOTE oversampling.
-* **Top Predictor:** `PageValues` serves as the primary driver of conversion intent, contributing over 40% of feature importance.
+* **Dataset Audit:** 12,205 unique sessions (10,312 non-converting / 1,893 converting) after removing 125 exact duplicates.
+* **Class Imbalance:** Solved severe 15.47% positive conversion imbalance using cost-sensitive weighting (`class_weight='balanced'`) and SMOTE oversampling.
+* **Top Predictor:** `PageValues` accounts for >40% of Gini importance in distinguishing active buyers from casual browsers.
+* **Production Model:** Cost-sensitive Random Forest achieved an **ROC-AUC of 0.9253** and an **F1-Score of 0.6764**.
+
+---
 
 ## 📊 Model Performance Comparison
 
-| Model Pipeline | Class Weighting | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+| Model Pipeline | Imbalance Strategy | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Random Forest** | **Balanced** | **89.8%** | **0.6318** | **0.7277** | **0.6764** | **0.9253** |
-| **Logistic Regression** | Balanced | 87.2% | 0.5164 | 0.7853 | 0.6231 | 0.9109 |
-| **Decision Tree** | Default | 85.1% | 0.5210 | 0.5420 | 0.5313 | 0.7240 |
+| **Random Forest** | **Balanced Class Weight** | **89.8%** | **0.6318** | **0.7277** | **0.6764** | **0.9253** |
+| **Random Forest** | SMOTE Resampling | 88.6% | 0.6410 | 0.7199 | 0.6782 | 0.9249 |
+| **Logistic Regression** | Balanced Class Weight | 87.2% | 0.5164 | 0.7853 | 0.6231 | 0.9109 |
+| **Decision Tree** | Default Weights | 85.1% | 0.5210 | 0.5420 | 0.5313 | 0.7240 |
 
-## 🛠️ Installation & Setup
+---
 
-1. **Clone the repository:**
+## 📈 Visualizations & Key Analytics
+
+### Model ROC-AUC Performance
+![ROC Curves](ml%20project%20screenshots/ROC%20Curves.png)
+
+### Confusion Matrices Evaluation
+![Confusion Matrices](ml%20project%20screenshots/Confusion%20Matrices.png)
+
+---
+
+## 🛠️ Installation & Environment Setup
+
+1. **Clone Repository:**
    ```bash
    git clone [https://github.com/BrianKKoskei/online_shoppers_intention.git](https://github.com/BrianKKoskei/online_shoppers_intention.git)
    cd online_shoppers_intention
