@@ -35,13 +35,15 @@
 ## 📈 Visualizations & Key Analytics
 
 ### Model ROC-AUC Performance
-<img src="ml project screenshots/ROC Curves.png" alt="ROC Curves" width="100%">
+<img width="669" height="494" alt="ROC Curves" src="https://github.com/user-attachments/assets/e03d6efc-ce39-44a7-96a4-7108fabe4342" />
 
 ### Confusion Matrices Evaluation
-<img src="ml project screenshots/Confusion Matrices.png" alt="Confusion Matrices" width="100%">
+<img width="999" height="419" alt="Confusion Matrices" src="https://github.com/user-attachments/assets/9b255be9-4106-4687-8148-590f2d4ea6a9" />
+
 
 ### Feature Importance Breakdown
-<img src="ml project screenshots/Feature Importance.png" alt="Feature Importance" width="100%">
+<img width="842" height="502" alt="Feature Importance" src="https://github.com/user-attachments/assets/989831d0-d689-4ad4-87d0-7b3ded125624" />
+
 ---
 
 ## 🛠️ Installation & Environment Setup
