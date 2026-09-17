@@ -39,6 +39,8 @@
 ### Confusion Matrices Evaluation
 ![Confusion Matrices](ml%20project%20screenshots/Confusion%20Matrices.png)
 
+### Feature Importance Breakdown
+![Feature Importance](ml%20project%20screenshots/Feature%20Importance.png)
 ---
 
 ## 🛠️ Installation & Environment Setup
